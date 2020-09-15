@@ -5,19 +5,17 @@ function getImages(reqUrl){
     xhr.send();
     xhr.onload = function(){
         let i = 0;
-        let jsonObj = JSON.parse(xhr.responseText);
+        let jsonObj = JSON.parse(xhr.response);
         jsonObj.forEach(pic =>{
-            imgList[i] = pic.download_url;
-            i+=1;
+            imgList.push(pic.download_url);
         });
     }
-    return imgList;
 }
 function drawImages(imgList){
     let rez = '';
     let i = 0;
-    console.log(imgList[2]);
-    for (i=0; i < length.imgList; i+=1){
+    console.log(imgList);
+    for (i=0; i < imgList.length; i+=1){
         console.log(imgList[i]);
     }
     // imgList.forEach(imgLink =>{
@@ -31,6 +29,9 @@ function drawImages(imgList){
 }
 
 function init(){
+    let arr = new Array();
+    arr = ["1","2","3","4"];
+    console.log(arr, arr.length, arr[2]);
     document.querySelector(".sendDataButton").addEventListener("click", (e)=>{
         e.preventDefault();
         const value = Number(document.querySelector(".inputData").value);
@@ -39,7 +40,7 @@ function init(){
                 document.querySelector(".rezultMsg").innerHTML = "";
                 reqUrl = `https://picsum.photos/v2/list?limit=${value}`
                 let imgList = getImages(reqUrl);
-                console.log(length.imgList);
+                // console.log(imgList.length);
                 document.querySelector(".pictureContainer").innerHTML = drawImages(imgList);
             }
             else{
