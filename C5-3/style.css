@@ -4,12 +4,20 @@ body{
 p{
     color: coral;
 }
-/* .sendDataButton{
-
+.pictureContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
+    
 }
-.inputData{
-
+.imgDiv{
+    display: flex;
+    padding: 2px;
+    height: 200px;
+    justify-content: center;
 }
-.rezultMsg{
-
-} */
+.cover{
+    height: 100%;
+    width: auto;
+  }
