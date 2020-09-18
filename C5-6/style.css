@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+p{
+    color: coral;
+}
+.pictureContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
+    
+}
+.imgDiv{
+    display: flex;
+    padding: 2px;
+    height: 200px;
+    justify-content: center;
+}
+.cover{
+    height: 100%;
+    width: auto;
+  }
