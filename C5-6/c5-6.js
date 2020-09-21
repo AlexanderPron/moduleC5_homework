@@ -1,14 +1,14 @@
-
-async function getImage(reqUrl){
-    return const rez = await fetch(reqUrl)
+function getImage(reqUrl){
+    fetch(reqUrl)
     .then((response) => {
-        console.log(response.json);
-        return response.json;
+        return response.url;
     })
-    // .then())
+    .then((imgUrl) => {
+        drawImage(imgUrl);
+    })
 }
-function drawImage(imgList){
-    console.log('Отображаем картинку');
+function drawImage(imgUrl){
+    document.querySelector(".imgDiv").innerHTML = `<img src="${imgUrl}"</img>`;
 }
 
 function init(){
@@ -32,3 +32,4 @@ function init(){
     });
 }
 init();
+
