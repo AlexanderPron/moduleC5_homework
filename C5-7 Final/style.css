@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+body{
+    background-color: black;
+}
+label{
+    color: coral;
+    margin: 0;
+}
+h2{
+    color: coral;
+}
+p{
+    color: coral;
+    margin: 0;
+}
+.warrningMsgInput1,.warrningMsgInput2,.warrningMsgBoth{
+    color: brown;
+    margin-left: 10px;
+}
+.pictureContainer{
+    display: grid;
+    width: min-content;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+.sendDataForm{
+    display: block;
+    width: 700px;
+}
+.input-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+
+}
+.sendDataButton, .clearStorrageBtn{
+    background-color: limegreen;
+    border-radius: 7px;
+}
+.querryBtns{
+    display: inline-flex;
+}
+.button:hover{
+    background-color: green;
+    border-radius: 7px;
+}
+.inputData1, .inputData2{
+    border-radius: 5px;
+    background-color: rgb(235, 142, 108);
+    border: 0;
+    margin-bottom: 5px;
+}
+
